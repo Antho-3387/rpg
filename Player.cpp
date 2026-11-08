@@ -6,26 +6,27 @@ void Player::SelectYourStatPlayer() {
 
     int choice;
 
-    std::cout << "Choisie ta race ! " << std::endl;
+    std::cout << "Quel est le nom de ton personnage ? ";
+    std::getline(std::cin >> std::ws, PlayerName);
 
-    std::cout << " 1) Humain 👱🏻" << std::endl;
-    std::cout << " 4 Hp" << std::endl;
-    std::cout << " 5 Damage" << std::endl;
-    std::cout << " " << std::endl;
+    std::cout << "\n+--------------------------------+\n";
+    std::cout << "|          CHOISIS TA RACE       |\n";
+    std::cout << "+--------------------------------+\n";
 
-    std::cout << " 2) Elf 🧝🏼" << std::endl;
-    std::cout << " 4 Hp" << std::endl;
-    std::cout << " 1 Damage" << std::endl;
-    std::cout << " " << std::endl;
+    std::cout << "| 1) Humain 👱🏻                 |\n";
+    std::cout << "|    PV : 24  | Dégâts : 15        |\n";
+    std::cout << "+--------------------------------+\n";
 
-    std::cout << " 3) Saitama 🦸🏻️" << std::endl;
-    std::cout << " 999 Hp️" << std::endl;
-    std::cout << " 999 Damage" << std::endl;
-    std::cout << " " << std::endl;
+    std::cout << "| 2) Elf 🧝🏼                    |\n";
+    std::cout << "|    PV : 34  | Dégâts : 11        |\n";
+    std::cout << "+--------------------------------+\n";
+
+    std::cout << "| 3) Saitama 🦸🏻️                |\n";
+    std::cout << "|    PV : 999 | Dégâts : 999     |\n";
+    std::cout << "+--------------------------------+\n";
+    std::cout << "Ton choix : ";
 
     std::cin >> choice;
-
-    Race* SelectedRace = nullptr;
 
     switch (choice) {
         case 1:
@@ -45,12 +46,12 @@ void Player::SelectYourStatPlayer() {
     }
 
     PlayerHp = SelectedRace->CharacterHp;
-    PlayerDamage = SelectedRace->CharacterDamage;
 
-    std::cout << "\n--- Stats du joueur ---\n";
-    std::cout << "Damage : " << PlayerDamage << "\n";
-    std::cout << "Hp : " << PlayerHp << std::endl;
-
-    delete SelectedRace;
-    SelectedRace = nullptr;
+    std::cout << "\n+--------------------------------+\n";
+    std::cout << "|          STATS DU JOUEUR       |\n";
+    std::cout << "+--------------------------------+\n";
+    std::cout << "| Nom    : " << PlayerName << "\n";
+    std::cout << "| Dégâts : " << SelectedRace->CharacterDamage << "\n";
+    std::cout << "| PV     : " << PlayerHp << "\n";
+    std::cout << "+--------------------------------+\n";
 }

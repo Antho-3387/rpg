@@ -1,11 +1,13 @@
 #ifndef RPGFIGHTING_BOT_H
 #define RPGFIGHTING_BOT_H
 
+#include <string>
 
 class Bot {
 public:
-    int BotHp;
-    int BotDamage;
+    std::string BotName;
+    int BotHp = 0;
+    int BotDamage = 0;
 
     void SelectYourStatBot();
 };

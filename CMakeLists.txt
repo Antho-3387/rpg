@@ -1,16 +1,15 @@
-cmake_minimum_required(VERSION 4.3)
+cmake_minimum_required(VERSION 3.20)
 project(RPGFighting)
 
 set(CMAKE_CXX_STANDARD 20)
+set(CMAKE_CXX_STANDARD_REQUIRED ON)
 
-add_executable(RPGFighting main.cpp
+add_executable(RPGFighting
+        main.cpp
         Player.cpp
-        Player.h
         Fight.cpp
-        Fight.h
         Bot.cpp
-        Bot.h
         Menu.cpp
-        Menu.h
         Race.cpp
-        Race.h)
+        Weapon.cpp
+        Inventory.cpp)

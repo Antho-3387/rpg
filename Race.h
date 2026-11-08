@@ -5,6 +5,7 @@ class Race {
 public:
     int CharacterHp = 0;
     int CharacterDamage = 0;
+    virtual ~Race() = default;
 };
 
 class Human : public Race {
